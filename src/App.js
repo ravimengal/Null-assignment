@@ -1,11 +1,22 @@
-
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Nav from "./components/Nav";
+import Fetchdata from "./components/Fetch/Fetchdata";
+import "./components/Fetch/Fetchdata.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello from react</h1>
-    </div>
+    <Router>
+     
+      <Route path='/'/>
+      <Route/>
+      <Route/>
+      <Nav />
+      <div className="App">
+        <Fetchdata />
+      </div>
+    </Router>
   );
 }
 
