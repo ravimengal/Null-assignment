@@ -1,12 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Fetchdata from './Fetch/Fetchdata'
 import '../App.css'
+import Loader from '../components/Loader/Loader'
 
 const Home = () => {
+
+   
     return (
         <div>
-            <h1>welcome to home page</h1>
-            <div className="App"><Fetchdata/></div>
+          {
+
+
+          }
+          <Loader />
+            <div className="App">
+            
+                <Fetchdata/>
+                
+                </div>
             
         </div>
     )
