@@ -1,21 +1,24 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
-import Fetchdata from "./components/Fetch/Fetchdata";
 import "./components/Fetch/Fetchdata.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import {} from './components/Loader/Loader'
 
 function App() {
   return (
     <Router>
-     
-      <Route path='/'/>
-      <Route/>
-      <Route/>
       <Nav />
-      <div className="App">
-        <Fetchdata />
-      </div>
+      <Switch>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
     </Router>
   );
 }
