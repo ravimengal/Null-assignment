@@ -3,11 +3,12 @@ import { css } from "@emotion/react";
 import ClipLoader from "react-spinners/ClipLoader";
 
 // Can be a string as well. Need to ensure each key-value pair ends with ;
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
+// const override = css`
+//     position: fixed; 
+//     top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+// `;
 
 function Loader() {
  
@@ -18,7 +19,12 @@ function Loader() {
      
       <input value={color} onChange={(input) => setColor(input.target.value)} placeholder="Color of the loader" />
 
-      <ClipLoader color={color} loading={loading} css={override} size={300} />
+      <ClipLoader color={color}  css={css`
+    position: fixed; 
+    top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+`} size={300} />
     </div>
   );
 }
