@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Fetchdata.css";
 
-const Fetchdata = () => {
+const Fetchdata = (props) => {
   const [infos, setInfos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false)
 
   const getApi = async () => {
     try {

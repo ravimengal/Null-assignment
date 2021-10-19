@@ -1,23 +1,25 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Fetchdata from './Fetch/Fetchdata'
 import '../App.css'
-import Loader from '../components/Loader/Loader'
+import Loader from "./Loader/Loader"
 
-const Home = () => {
 
-   
+const Home = ({isLoading}) => {
+
+  
     return (
-        <div>
-          {
+       
+        <div className="App">
+            {
+                isLoading ?  <Fetchdata/>:
 
 
-          }
-          <Loader />
-            <div className="App">
+                <Loader/>
+
+            }
+           
+      
             
-                <Fetchdata/>
-                
-                </div>
             
         </div>
     )

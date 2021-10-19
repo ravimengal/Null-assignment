@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { css } from "@emotion/react";
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -12,10 +12,10 @@ const override = css`
 
 function Loader() {
  
- const [isLoading, setIsLoading] = useState(false)
+
   return (
     <div className="sweet-loading">
-      <ClipLoader isLoading={isLoading}  css={override} size={200} />
+      <ClipLoader   css={override} size={200} />
     </div>
   );
 }
