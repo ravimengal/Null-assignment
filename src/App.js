@@ -5,7 +5,8 @@ import "./components/Fetch/Fetchdata.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import {} from './components/Loader/Loader'
+
+import NavDetail from "./components/Loader/NavDetail";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/detail">
+          <NavDetail />
         </Route>
       </Switch>
     </Router>

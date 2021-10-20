@@ -1,28 +1,16 @@
-import React from 'react'
-import Fetchdata from './Fetch/Fetchdata'
-import '../App.css'
-import Loader from "./Loader/Loader"
+import React from "react";
+import Fetchdata from "./Fetch/Fetchdata";
+import "../App.css";
 
 
-const Home = ({isLoading}) => {
-
-  
-    return (
-       
-        <div className="App">
-            {
-                isLoading ?  <Fetchdata/>:
-
-
-                <Loader/>
-
-            }
-           
+const Home = () => {
+    
+  return (
+    <div className="App">
+     <Fetchdata />
       
-            
-            
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Home
+export default Home;
